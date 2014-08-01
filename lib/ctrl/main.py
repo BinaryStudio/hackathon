@@ -4,4 +4,4 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
-    return 'main'
+    return 'main lala'
