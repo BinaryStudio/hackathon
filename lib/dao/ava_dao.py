@@ -17,15 +17,14 @@ class AvaDao(object):
     def get(self, id):
         return self.fb.get('/ava', str(id))
 
-    def inc(self, id):
+    def incn(self, id, num):
         cur = int(self.get(id))
-        cur += 1
+        cur += num
         self.update(id, cur)
 
-    def dec(self, id):
+    def decn(self, id, num):
         cur = int(self.get(id))
-        cur -= 1
+        cur -= num
         self.update(id, cur)
-
 if __name__ == '__main__':
     AvaDao().create(1, 200)
