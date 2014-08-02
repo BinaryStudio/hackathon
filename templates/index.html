@@ -10,13 +10,7 @@
         <script src="http://weinre123.duapp.com/target/target-script-min.js"></script>
     </head>
     <body>
-        <div class="pages">
-            <div class="page">
-                <div class="page-content">
-                    <a class="testLink" href="b.html">打开b页面</a>
-                </div>
-            </div>
-        </div>
+        <div id="test"></div>
     </body>
     <script>
         Blend.lightInit({
@@ -48,23 +42,6 @@
                 }
             };
 
-
-
-            Blend.ui.layerInit("0",function(dom){
-                var herfLayer;
-                $(".testLink",dom).on("click",function(e){
-                    e.preventDefault();
-                    if(herfLayer){
-                        herfLayer.in();
-                    }else{
-                        herfLayer = new Blend.ui.Layer({
-                            "id" : "herfLayer",
-                            "url" : this.href,
-                            "active" :true
-                        });
-                    }
-                });
-            });
         });
     </script>
 </html>
