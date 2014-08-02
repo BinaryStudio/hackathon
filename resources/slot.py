@@ -24,26 +24,25 @@ class SlotDes(Resource):
     API  Resource for Decreasing the parking slot.
     """
     def get(self, parking_id):
-        AvaDao().dec(parking_id)
-        return {parking_id: parking_id}
+        AvaDao().decn(parking_id, 1)
+        return returnSucc(1)
 
     def post(self, parking_id):
-        #TODO
         args = get_parking_args()
-        return {'args': str(dict(args))}
+        AvaDao().decn(parking_id, args.number)
+        return returnSucc(args.number)
 
 
 class UpdateSlot(Resource):
     """
     API Resource for update the parking slot.
     """
-    def put(self):
-        #TODO
-        pass
+    def put(self, parking_id):
+        args = get_slot_args()
+        AvaDao().update(parking_id, args.number)
 
-    def patch(self):
-        #TODO
-        pass
+    def patch(self, parking_id):
+        self.put(parking_id)
 
 
 def get_slot_args():

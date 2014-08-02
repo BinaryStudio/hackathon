@@ -3,7 +3,6 @@ from flask import Flask
 from flask.ext.restful import Api
 from resources.parking import Parking, Parkings
 from resources.slot import SlotInc
-
 from lib.utils.ext import db
 
 
@@ -18,7 +17,10 @@ def create_app():
     api = Api(app)
     api.add_resource(Parking, '/parkings/<string:parking_id>')
     api.add_resource(Parkings, '/parkings')
-    api.add_resource(SlotInc, '/slot/<string:parking_id>')
+    api.add_resource(SlotInc, '/slot/inc/<string:parking_id>')
+    api.add_resource(SlotDes, '/slot/des/<string:parking_id>')
+    api.add_resource(UpdateSlot, '/slot/update/<string:parking_id>')
+
 
     return app
 
