@@ -27,20 +27,14 @@
               {"url":'http://static.wenku.bdimg.com/topic/wapTopics/jingpinshichang.jpg'}
             ];
             var slider;
-            window.onhashchange = function(e) {
-                var hash = location.hash.slice(1);
-                if (hash == "slider") {
-                    slider = new Blend.ui.Slider({
+            slider = new Blend.ui.Slider({
                         "id": "test",
                         "bgColor": "#cccccc",
                         "images": images,
                         "width" : 100,
                         "height" : 200
                     });
-                }else {
-                    slider && slider.destroy();
-                }
-            };
+
 
         });
     </script>
