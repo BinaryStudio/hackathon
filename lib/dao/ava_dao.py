@@ -11,9 +11,18 @@ class AvaDao(object):
     def update(self, id, nums):
         self.fb.patch('/ava', { str(id): nums })
 
-
     def delete(self, id):
         self.fb.delete('/ava', str(id))
 
     def get(self, id):
         return self.fb.get('/ava', str(id))
+
+    def inc(self, id):
+        cur = int(self.get(id))
+        cur += 1
+        self.update(id, cur)
+
+    def dec(self, id):
+        cur = int(self.get(id))
+        cur -= 1
+        self.update(id, cur)

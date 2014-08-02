@@ -1,13 +1,19 @@
 from flask import Blueprint
-from lib.dao.basic_dao import BasicInfoDao
-from lib.models.model import BasicInfo
+from lib.dao.ava_dao import AvaDao
 
 main = Blueprint('main', __name__)
+ava_dao = AvaDao()
 
 @main.route('/')
 def index():
-    return 'main'
+    return 'welcome'
 
-@main.route('/test')
-def test():
-    return test
+@main.route('/ava/<id>/inc')
+def ava_inc(id):
+    ava_dao.inc(id)
+    return 'OK'
+
+@main.route('/ava/<id>/dec')
+def ava_dec(id):
+    ava_dao.dec(id)
+    return 'OK'
