@@ -16,9 +16,5 @@ def create_app():
 app = create_app()
 
 
-@app.route('/')
-def index():
-    return render_template('geolocation.html')
-
 if __name__ == '__main__':
     app.run(host=app.config['HOST'], port=app.config['PORT'])
