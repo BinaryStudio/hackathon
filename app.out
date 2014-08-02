@@ -1,0 +1,15 @@
+ * Running on http://localhost:80/
+Traceback (most recent call last):
+  File "app.py", line 18, in <module>
+    app.run(host=app.config['HOST'], port=app.config['PORT'])
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 772, in run
+    run_simple(host, port, self, **options)
+  File "/Library/Python/2.7/site-packages/werkzeug/serving.py", line 706, in run_simple
+    test_socket.bind((hostname, port))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 13] Permission denied
+ * Running on http://localhost:5001/
+ * Restarting with reloader
+127.0.0.1 - - [02/Aug/2014 18:12:38] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Aug/2014 18:12:38] "GET /favicon.ico HTTP/1.1" 404 -
