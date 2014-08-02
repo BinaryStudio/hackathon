@@ -6,18 +6,14 @@ class AvaDao(object):
                   ('https://parkplace.firebaseio.com', None)
 
     def create(self, id, nums):
-        self.fb.post('/ava' + str(), data=nums)
+        self.fb.put('/ava', str(id), nums)
 
     def update(self, id, nums):
-        self.fb.patch('/ava', nums)
+        self.fb.patch('/ava', { str(id): nums })
 
 
     def delete(self, id):
-        self.fb.delete('/ava' + str(id))
+        self.fb.delete('/ava', str(id))
 
     def get(self, id):
-        return self.fb.get('/ava' + str(id), None)
-
-if __name__ == '__main__':
-    ava = AvaDao()
-    ava.create(1, 200)
+        return self.fb.get('/ava', str(id))
