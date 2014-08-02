@@ -22,6 +22,7 @@ class BasicInfoDao(object):
         db.session.commit()
 
     def create(self, basic_info):
+        print basic_info
         db.session.add(basic_info)
         db.session.commit()
         return basic_info
