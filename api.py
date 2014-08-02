@@ -17,9 +17,10 @@ def create_app():
     api = Api(app)
     api.add_resource(Parking, '/parkings/<string:parking_id>')
     api.add_resource(Parkings, '/parkings')
-    api.add_resource(SlotInc, '/slot/inc/<string:parking_id>')
-    api.add_resource(SlotDes, '/slot/des/<string:parking_id>')
-    api.add_resource(UpdateSlot, '/slot/update/<string:parking_id>')
+    api.add_resource(SlotInc, '/slots/inc/<string:parking_id>')
+    api.add_resource(SlotDes, '/slots/des/<string:parking_id>')
+    api.add_resource(UpdateSlot, '/slots/update/<string:parking_id>')
+    api.add_resource(Slot, '/slots')
 
 
     return app

@@ -46,6 +46,15 @@ class UpdateSlot(Resource):
         return self.put(parking_id)
 
 
+class Slot(Resource):
+    """
+    API to show the slot.
+    """
+    def get(self, parking_id):
+        slotnumber = int(AvaDao().get(parking_id))
+        return returnSucc(slotnumber)
+
+
 def get_slot_args():
     parking_parser = reqparse.RequestParser()
     parking_parser.add_argument('number', type=int,
