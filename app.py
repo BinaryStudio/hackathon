@@ -4,7 +4,7 @@ from lib.utils.ext import db
 from lib.ctrl.main import main
 
 def create_app():
-    app = Flask("hackathon")
+    app = Flask("parkplace")
     app.config.from_pyfile('config.' + sys.argv[1] + '.cfg', silent=True)
     app.register_blueprint(main)
     db.init_app(app)
