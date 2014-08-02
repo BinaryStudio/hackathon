@@ -19,8 +19,9 @@
     <script>
         Blend.lightInit({
             ak:'xVNh2HVifZr3dI2p0mQmMb0h', //轻应用apikey
-            module:["blendui"]//根据需要添加模块到数组中即可
+            module:["activity","battery","connection","device","fs","globalization","geolocation","media","qr","account","pay","socialshare","blendui"]
         });
+
 
         document.addEventListener("blendready",function(){
             Blend.ui.layerInit("0",function(dom){
