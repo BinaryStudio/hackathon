@@ -27,3 +27,4 @@ class BasicInfoDao(object):
     def create_via_dict(self, json_dict):
         basic_info = BasicInfo(json_dict)
         self.create(basic_info)
+        return basic_info
