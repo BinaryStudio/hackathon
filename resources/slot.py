@@ -2,7 +2,7 @@ from flask.ext.restful import reqparse
 from flask.ext.restful import Resource
 from lib.dao.ava_dao import AvaDao
 from lib.dao.basic_dao import BasicInfoDao
-from common.resultutil import *
+from lib.utils.resultutil import *
 
 
 class SlotInc(Resource):
