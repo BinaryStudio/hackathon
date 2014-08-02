@@ -1,1 +1,1 @@
-sudo python app.py dev
+sudo python api.py dev
