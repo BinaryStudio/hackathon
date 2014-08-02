@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0">
+<title>VIBRANT formatting examples</title>
+
+<!-- BEGIN FONTS + STYLESHEETS + JS INCLUDES -->
+<link rel='stylesheet' id='fonts' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Montserrat:400,700' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css' href='css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='elements-css' href='css/elements.css' type='text/css' media='all' />
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<link rel="stylesheet" href="css/swiper-style.css">
+<script src="js/idangerous.swiper-1.9.1.min.js"></script>
+<script src="js/swiper-demos.js"></script>
+
+<script type='text/javascript' src='js/jquery.js'></script>
+<script type='text/javascript' src='js/general-header.js'></script>
+<script type='text/javascript' src='js/elements.js'></script>
+
+<link href="photoswipe/styles.css" type="text/css" rel="stylesheet">
+<link href="photoswipe/photoswipe.css" type="text/css" rel="stylesheet">
+
+<script type="text/javascript" src="photoswipe/lib/klass.min.js"></script>
+<script type="text/javascript" src="photoswipe/code.photoswipe-3.0.5.min.js"></script>
+<!-- END FONTS + STYLESHEETS + JS INCLUDES -->
+
+<!-- BEGIN PHOTOSWIPE -->
+<script>
+(function(window, PhotoSwipe){
+	document.addEventListener('DOMContentLoaded', function(){
+		var
+			options = {},
+			instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+	}, false);
+}(window, window.Code.PhotoSwipe));
+</script>
+<!-- END PHOTOSWIPE -->
+
+<body>
+
+<!-- BEGIN SITE LOGO -->
+<div id="header-bar">
+	<div class="site-logo-wrapper">
+
+		<!-- BEGIN LOGO -->
+		<div class="site-logo">
+			<a href="index.html">
+				Vibrant
+			</a>
+		</div>
+		<!-- END LOGO -->
+
+	</div>
+</div>
+<!-- END SITE LOGO -->
+
+<!-- BEGIN MENU BUTTON -->
+<div class="menu-wrapper">
+	<div class="menu-button"></div>
+</div>
+<!-- END MENU BUTTON -->
+
+<!-- BEGIN MENU INCLUDE -->
+<div id="menu"><!-- BEGIN MENU -->
+<ul id="menu-main-menu" class="menu">
+<li class="menu-item"><a href="index.html">FRONT PAGE</a></li>
+<li class="menu-item"><a href="blog-posts.html">READ THE BLOG</a></li>
+
+<li class="sub menu-item"><a href="formatting.html#">POST TYPES</a>
+	<ul class="sub-menu">
+	<li class="menu-item"><a href="post-standard.html">STANDARD</a></li>
+	<li class="menu-item"><a href="post-video.html">VIDEO</a></li>
+	</ul>
+</li>
+
+<li class="sub menu-item"><a href="formatting.html#">MISC</a>
+	<ul class="sub-menu">
+		<li class="menu-item"><a href="portfolio.html">PORTFOLIO</a></li>
+		<li class="menu-item"><a href="gallery.html">GALLERY</a></li>
+		<li class="menu-item"><a href="formatting.html">FORMATTING</a></li>
+		<li class="menu-item"><a href="elements.html">BUTTONS, ALERTS ETC.</a></li>
+		<li class="menu-item"><a href="archive.html">ARCHIVE</a></li>
+	</ul>
+</li>
+<li class="menu-item"><a href="http://themeforest.net/item/vibrant-a-supersharp-template-for-touch-devices/7735248?ref=BonfireThemes" target="_blank">BUY THIS TEMPLATE</a></li>
+<li class="menu-item"><a href="contact.html">GET IN TOUCH</a></li>
+</ul>
+<!-- END MENU --></div>
+<!-- END MENU INCLUDE -->
+
+<!-- BEGIN MENU CLOSE AREA -->
+<div id="menu-open-overlay"></div>
+<!-- END MENU CLOSE AREA -->
+
+<!-- BEGIN IF MENU OPEN, SHOW BLUE BACKGROUND -->
+<div id="menu-open-background">
+	<div class="menu-open-background"></div>
+</div>
+<!-- END IF MENU OPEN, SHOW BLUE BACKGROUND -->
+
+<div id="sitewrap">
+<div id="content">
+<div class="wrapper-outer">
+<div class="content-wrapper">
+
+<!--
+BEGIN EDITING HERE
+-->
+		
+		<!-- BEGIN TITLE -->
+		<h1 class="post-title">Formatting examples</h1>
+		<!-- END TITLE -->
+		
+		<!-- BEGIN CONTENT -->
+		<div class="entry-content">
+		<p>Here we have a sample post of the most basic text formatting options available. Not the most exciting page in this template demo, but nevertheless a necessary one :)</p>
+		
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6>Align left</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6 style="text-align: center;">Align center</h6>
+		<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6 style="text-align: right;">Align right</h6>
+		<p style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6>Text styling</h6>
+		<p><a href="formatting.html#">A link</a><br />
+		<strong>Bold text</strong><br />
+		<em>Italic text</em><br />
+		<del>Strikethrough text</del><br />
+		<span style="text-decoration: underline;">Underline text</span></p>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6>Unordered list</h6>
+		<ul>
+		<li>Item one</li>
+		<li>Item two</li>
+		<li>Item three</li>
+		</ul>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6>Ordered list</h6>
+		<ol>
+		<li>Item one</li>
+		<li>Item two</li>
+		<li>Item three</li>
+		</ol>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h6>Blockquote</h6>
+		<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+		<p>&nbsp;</p>
+		<hr>
+		<p>&nbsp;</p>
+		<h1>Heading 1</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h2>Heading 2</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h3>Heading 3</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h4>Heading 4</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h5>Heading 5</h5>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h6>Heading 6</h6>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		
+		</div>
+		<!-- END CONTENT -->
+
+<!--
+END EDITING HERE
+-->					
+
+</div>
+</div>
+</div>
+</div>
+
+<!-- BEGIN FOOTER JS INCLUDES -->
+<script type='text/javascript' src='js/general-footer.js'></script>
+<script type='text/javascript' src='js/autogrow/jquery.autogrow-textarea.js'></script>
+<script type='text/javascript' src='js/placeholder-fix.js'></script>
+<script type='text/javascript' src='js/jquery.scrollTo-min.js'></script>
+<!-- END FOOTER JS INCLUDES -->
+
+</body>
+</html>
