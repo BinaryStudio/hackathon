@@ -1,2 +1,4 @@
 *.pyc
 db/database.db
+app.out
+api.out
