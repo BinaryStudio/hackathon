@@ -10,3 +10,7 @@ def index():
 @main.route('/map')
 def map():
     return render_template('map.html')
+
+@main.route('/list')
+def list():
+    return render_template('list.html')

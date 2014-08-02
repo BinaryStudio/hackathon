@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>firebase test</title>
+</head>
+<body>
+    <span data-id="1"></span>
+    <span data-id="2"></span>
+    <span data-id="3"></span>
+    <span data-id="4"></span>
+    <span data-id="5"></span>
+</body>>
+<script src="http://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/firebase.js') }}">
+<script>
+    firebase.bindElement($('.span'));
+</script>
+</html>
