@@ -12,7 +12,7 @@ def create_app():
     app.config.from_pyfile('api.config.' + sys.argv[1] + '.cfg', silent=True)
 
     db.init_app(app)
-    with app.app_cotext():
+    with app.app_context():
         db.create_all()
 
     api = Api(app)

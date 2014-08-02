@@ -1,3 +1,4 @@
+from flask.ext.restful import reqparse
 from flask.ext.restful import Resource
 from lib.dao.ava_dao import AvaDao
 from lib.dao.basic_dao import BasicInfoDao
@@ -47,7 +48,7 @@ class UpdateSlot(Resource):
 
 def get_slot_args():
     parking_parser = reqparse.RequestParser()
-    parking_parser.add_argument('number', type=str,
+    parking_parser.add_argument('number', type=int,
         help='The number of changed slots')
     return parking_parser.parse_args()
 
