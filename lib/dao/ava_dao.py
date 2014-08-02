@@ -26,3 +26,6 @@ class AvaDao(object):
         cur = int(self.get(id))
         cur -= 1
         self.update(id, cur)
+
+if __name__ == '__main__':
+    AvaDao().create(1, 200)
