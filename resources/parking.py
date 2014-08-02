@@ -14,6 +14,7 @@ class Parkings(Resource):
     def post(self):
         #TODO
         args = get_parking_args()
+        print dict(args)
         result = BasicInfoDao().create_via_dict(dict(args))
         return {'result': 'success', 'data': str(result)}
 
