@@ -16,5 +16,5 @@ def list():
     return render_template('list.html')
 
 @main.route('/register')
-def register:
+def register():
     return render_template('parking/register.html')
