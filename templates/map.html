@@ -19,11 +19,19 @@ var map = new BMap.Map("l-map");
 var point = new BMap.Point(116.331398,39.897445);
 map.centerAndZoom(point,12);
 
-var geolocation = new BMap.Geolocation();
+var startPoint, endPoint;
 
+var geolocation = new BMap.Geolocation();
+var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true}});
 var local = new BMap.LocalSearch(map, {
-  renderOptions:{map: map, autoViewport:true}
+  renderOptions:{map: map, autoViewport:true},
+  onSearchComplete: function (result) {
+      //TODO 加入UID处理
+      var parking = result.Um[0];
+      driving.search(startPoint, parking.point);
+  }
 });
+
 
 
 geolocation.getCurrentPosition(function(r){
@@ -32,6 +40,7 @@ geolocation.getCurrentPosition(function(r){
         map.addOverlay(mk);
         map.panTo(r.point);
         local.searchNearby("停车场", r.point);
+        startPoint = r.point;
     }
     else {
         alert('failed'+this.getStatus());
