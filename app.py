@@ -2,6 +2,7 @@ import sys
 from flask import Flask
 from lib.utils.ext import db
 from lib.ctrl.main import main
+from flask import render_template
 
 def create_app():
     app = Flask("parkplace")
@@ -13,6 +14,11 @@ def create_app():
     return app
 
 app = create_app()
+
+
+@app.route('/')
+def index():
+    return render_template('geolocation.html')
 
 if __name__ == '__main__':
     app.run(host=app.config['HOST'], port=app.config['PORT'])
