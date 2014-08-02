@@ -16,8 +16,8 @@ class BasicInfo(db.Model):
     total_pak = db.Column(db.Integer)
     info = db.Column(db.Text)
 
-    def __init__(self, name, uid, total_pak, info):
-        self.name = name
-        self.uid = uid
-        self.total_pak = total_pak
-        self.info = info
+    def __init__(self, json_dic):
+        self.name = json_dic('name')
+        self.uid = json_dic('uid')
+        self.total_pak = json_dic('total_pak')
+        self.info = json_dic('info')
