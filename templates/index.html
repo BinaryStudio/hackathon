@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='plugin/blendui/res/js/crema.css') }}">
         <script src="http://apps.bdimg.com/libs/zepto/1.1.3/zepto.min.js"></script>
         <script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" src="http://apps.bdimg.com/blend/loader.js"></script>
+        <script src="http://weinre123.duapp.com/target/target-script-min.js"></script>
     </head>
     <body>
         <div class="pages">
@@ -24,6 +25,30 @@
 
 
         document.addEventListener("blendready",function(){
+
+            var images = [{"url":"http://static.wenku.bdimg.com/topic/wapTopics/old_07_02.jpg"},
+              {"url":"http://static.wenku.bdimg.com/topic/wapTopics/old_09_02.jpg"},
+              {"url":"http://static.wenku.bdimg.com/topic/wapTopics/new_03_02.jpg"},
+              {"url":'http://static.wenku.bdimg.com/topic/wapTopics/jingpinshichang.jpg'}
+            ];
+            var slider;
+               window.onhashchange = function(e) {
+                var hash = location.hash.slice(1);
+                if (hash == "slider") {
+                    slider = new Blend.ui.Slider({
+                        "id": "test",
+                        "bgColor": "#cccccc",
+                        "images": images,
+                        "width" : 100,
+                        "height" : 200
+                    });
+                }else {
+                    slider && slider.destroy();
+                }
+            };
+
+
+
             Blend.ui.layerInit("0",function(dom){
                 var herfLayer;
                 $(".testLink",dom).on("click",function(e){
