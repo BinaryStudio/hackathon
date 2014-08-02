@@ -2,7 +2,7 @@ import sys
 from flask import Flask
 from flask.ext.restful import Api
 from resources.parking import Parking, Parkings
-from resources.slot import SlotInc
+from resources.slot import SlotInc, SlotDes, UpdateSlot
 from lib.utils.ext import db
 
 

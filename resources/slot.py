@@ -28,7 +28,7 @@ class SlotDes(Resource):
         return returnSucc(1)
 
     def post(self, parking_id):
-        args = get_parking_args()
+        args = get_slot_args()
         AvaDao().decn(parking_id, args.number)
         return returnSucc(args.number)
 
@@ -40,9 +40,10 @@ class UpdateSlot(Resource):
     def put(self, parking_id):
         args = get_slot_args()
         AvaDao().update(parking_id, args.number)
+        return returnSucc(args.number)
 
     def patch(self, parking_id):
-        self.put(parking_id)
+        return self.put(parking_id)
 
 
 def get_slot_args():
