@@ -16,6 +16,7 @@ class PriceDao(object):
         _price.hour = price.hour
 
         db.session.save()
+        return price
 
     def delete(self, id):
         price = self.find_by_id(id)
@@ -25,3 +26,4 @@ class PriceDao(object):
     def create(self, price):
         db.session.add(price)
         db.session.commit()
+        return price

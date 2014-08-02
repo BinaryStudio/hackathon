@@ -14,6 +14,7 @@ class BasicInfoDao(object):
         _basic_info.total_pak = basic_info.total_pak
         _basic_info.info = basic_info.info
         db.session.save()
+        return _basic_info
 
     def delete(self, id):
         basic_info = self.find_by_id(id)
@@ -23,6 +24,7 @@ class BasicInfoDao(object):
     def create(self, basic_info):
         db.session.add(basic_info)
         db.session.commit()
+        return basic_info
 
     def create_via_dict(self, json_dict):
         basic_info = BasicInfo(json_dict)
