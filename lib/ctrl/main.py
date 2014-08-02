@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 from lib.dao.ava_dao import AvaDao
 
 main = Blueprint('main', __name__)
@@ -6,7 +6,7 @@ ava_dao = AvaDao()
 
 @main.route('/')
 def index():
-    return 'welcome'
+    return render_template('index.html')
 
 @main.route('/ava/<id>/inc')
 def ava_inc(id):
