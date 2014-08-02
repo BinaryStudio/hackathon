@@ -2,3 +2,4 @@
 db/database.db
 app.out
 api.out
+.DS_Store
