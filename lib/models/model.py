@@ -9,6 +9,7 @@ class Price(db.Model):
         self.hour = hour
         self.day = day
 
+
 class BasicInfo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
@@ -17,7 +18,7 @@ class BasicInfo(db.Model):
     info = db.Column(db.Text)
 
     def __init__(self, json_dic):
-        self.name = json_dic('name')
-        self.uid = json_dic('uid')
-        self.total_pak = json_dic('total_pak')
-        self.info = json_dic('info')
+        self.name = json_dic['name']
+        self.uid = json_dic['uid']
+        self.total_pak = json_dic['total_pak']
+        self.info = json_dic['info']
