@@ -9,13 +9,13 @@ class SlotInc(Resource):
     API Resource for Increasing the parking slot.
     """
     def get(self, parking_id):
-        AvaDao().inc(parking_id)
+        AvaDao().incn(parking_id, 1)
         return returnSucc(1)
 
     def post(self, parking_id):
-        parking = BasicInfoDao().find_by_id(parking_id)
-        AvaDao().create(parking_id, parking.total_pak)
-        return returnSucc(1)
+        args = get_slot_args()
+        AvaDao().incn(parking_id, args.number)
+        return returnSucc(args.number)
 
 
 class SlotDes(Resource):
@@ -44,6 +44,12 @@ class UpdateSlot(Resource):
         #TODO
         pass
 
+
+def get_slot_args():
+    parking_parser = reqparse.RequestParser()
+    parking_parser.add_argument('number', type=str,
+        help='The number of changed slots')
+    return parking_parser.parse_args()
 
 
 
