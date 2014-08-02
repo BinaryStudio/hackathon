@@ -4,16 +4,16 @@ var firebase = (function() {
 
     var bindElement = function(elements) {
         var path, ele;
-        for(var i = 0; i < elements.length; i++) {
+        for(var i = 0; i < elements.size(); i++) {
             ele = elements.eq(i);
-            path = path + ele.data('id');
+            path = basePath + ele.data('id');
             parkfb.child(path).on('value', function(snap) {
-                ele.text(snap.val());
-            });
-        }
-    }
+                $("span[data-id='"+snap.name()+"']").text(snap.val());
+            }); 
+        }   
+    }   
 
     return {
         bindElement: bindElement
-    };
+    };  
 })();

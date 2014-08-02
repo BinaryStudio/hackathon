@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>firebase test</title>
@@ -9,10 +8,12 @@
     <span data-id="3"></span>
     <span data-id="4"></span>
     <span data-id="5"></span>
-</body>>
-<script src="http://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='js/firebase.js') }}">
+</body>
+<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
+<script src="zepto.js"></script>
+<script src="selector.js"></script>
+<script type="text/javascript" src="./firebase.js"></script>
 <script>
-    firebase.bindElement($('.span'));
+    firebase.bindElement($('span'));
 </script>
 </html>
