@@ -1,0 +1,223 @@
+body {
+    padding:0;
+    margin:0;
+    background-color:#f2f2f2;
+}
+.main{
+    margin-top:50px;
+}
+
+.tips {
+    padding-left:5px;
+}
+.btitle {
+    padding-left: 17px;
+    background: url(../img/f00c.png) no-repeat;
+    background-size: 17px;
+    margin-left: 8px;
+}
+
+.syinfo {
+    height:40px;
+}
+.map-info-list td.syinfo {
+    padding-left:0;
+}
+.syinfo .synumber{
+    font-size:30px;
+    color:orange;
+}
+#map {
+    width:100%;
+    height:250px;
+    margin:0 auto;
+}
+.BMap_cpyCtrl {
+    display:none;
+}
+
+
+.loading{
+    width:50px;
+    margin:0 auto;
+}
+.map-info {
+    margin-top:5px;
+}
+
+.map-info em,.map-onlyInfo em {
+    text-decoration: none !important;
+}
+
+.map-info-list {
+    width: 95%;
+    padding: 8px 0;
+    background-color:#fff;
+    margin: 8px auto;
+    border: #d4d4d4 solid 1px;
+}
+
+.map-info-list td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left:4px;
+}
+
+.map-info-ico {
+    background: url(http://m.baidu.com/static/ala/map/sprite-2.png) no-repeat;
+    background-size: 46px 191px;
+    -webkit-background-size: 46px 191px;
+    display: inline-block;
+}
+
+.map-info-index {
+    width: 16px;
+    padding-left: 3px;
+    height: 24px;
+    font-size: 11px;
+    margin: 5px 0 0 5px;
+    display: block;
+    color: #fff;
+    font-weight: bold;
+}
+
+.map-info-index:first-child {
+    padding-left: 5px;
+}
+
+.map-info-name {
+    color: #000;
+    float: left;
+}
+
+.map-info-distance {
+    font-size: 75%;
+    color: #666;
+    float: right;
+}
+
+.map-info-address {
+    color: #666;
+}
+
+.map-info-money {
+    color: #000;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.map-info-money span {
+    color: #d03530;
+}
+
+.map-info-gomap {
+    width: 9px;
+    height: 15px;
+    background-position: 0 -92px;
+    margin-left: 2px
+}
+
+.map-info-star {
+    background: url(http://m.baidu.com/static/ala/map/sprite-2.png) no-repeat;
+    background-size: 46px 191px;
+    -webkit-background-size: 46px 191px;
+    display: inline-block;
+    background-position: 0 -120px;
+    width: 46px;
+    height: 11px;
+    position: relative;
+    top: -2px;
+}
+
+.map-info-star-gray {
+    background-position: 0 -140px !important;
+    top: 0px;
+    margin-right: 10px;
+}
+
+.map-info-star0 {
+    width: 0px;
+}
+
+.map-info-star1 {
+    width: 5px;
+}
+
+.map-info-star2 {
+    width: 10px;
+}
+
+.map-info-star3 {
+    width: 14px;
+}
+
+.map-info-star4 {
+    width: 18px;
+}
+
+.map-info-star5 {
+    width: 23px;
+}
+
+.map-info-star6 {
+    width: 28px;
+}
+
+.map-info-star7 {
+    width: 32px;
+}
+
+.map-info-star8 {
+    width: 36px;
+}
+
+.map-info-star9 {
+    width: 42px;
+}
+
+.map-info-star10 {
+    width: 46px;
+}
+
+.map-btn {
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#ededed));
+    border: 1px #cacaca solid;
+    line-height: 22px;
+    border-radius: 3px;
+    width: 140px;
+    display: inline-bloc k;
+    margin-top: 3px;
+}
+
+.map-btn a {
+    border: none !important;
+    text-decoration: none;
+    color: #000;
+}
+
+.map-onlyInfo-tel {
+    margin-right: 10px;
+}
+
+.map-onlyInfo-tel .map-info-ico,.map-onlyInfo-quan .map-info-ico {
+    padding: 0 10px 0 24px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.map-onlyInfo-tel .map-info-ico {
+    background-position: 5px -47px;
+}
+
+.map-onlyInfo-quan .map-info-ico {
+    background-position: 5px -25px;
+}
+
+.map-info-quanico {
+    background-position: right top;
+    width: 13px;
+    height: 16px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 2px;
+}
