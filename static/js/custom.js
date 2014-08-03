@@ -477,6 +477,17 @@ jQuery(document).ready(function ($) {
 
 	});
 
+	$('#registerButton').submit(function (event) {
+		event.preventDefault();
+		var form = $('#registerForm').serializeJson();
+		console.log(form);
+		if (parkinguid != undefined) {
+			form['uid'] = parkinguid;
+		}
+		submitData('post', 'parkings', form, callBackGenerator('success'), callBackGenerator('error'));
+
+	});
+
 
 
 });
