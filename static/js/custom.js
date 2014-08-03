@@ -454,7 +454,7 @@ jQuery(document).ready(function ($) {
 
 	$('#parkingaddress').blur(function () {
 
-		var address = $('#parkingaddress').text();
+		var address = $('#parkingaddress').val();
 		var myGeo = new BMap.Geocoder();
 		// 将地址解析结果显示在地图上,并调整地图视野
 		myGeo.getPoint(address, function (point) {
