@@ -479,6 +479,7 @@ jQuery(document).ready(function ($) {
 
 	$('#registerButton').submit(function (event) {
 		event.preventDefault();
+		console.log(event);
 		var form = $('#registerForm').serializeJson();
 		console.log(form);
 		if (parkinguid != undefined) {
