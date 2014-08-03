@@ -70,7 +70,7 @@
     <form id="shoppingCartWrapper" class="shoppingCartWrapper" action="register.html#" method="post">
       <fieldset>
         <!-- shopping cart product starts -->
-        <div class="shoppingCartProductWrapper"> <a  href="register.html" class="shoppingCartProductImageWrapper"><img src="images/content/shoppingCartProductImage-1.jpg" class="shoppingCartProductImage" alt=""/></a>
+        <div class="shoppingCartProductWrapper"> <a  href="register.html" class="shoppingCartProductImageWrapper"><img src="{{ url_for('static', filename='img/content/shoppingCartProductImage-1.jpg') }}" class="shoppingCartProductImage" alt=""/></a>
           <div class="shoppingCartProductInfoWrapper"> <a href="register.html" class="shoppingCartProductTitle">Product One</a>
             <div class="shoppingCartProductButtonsWrapper">
               <input type="text" id="shoppingCartProductNumber-1" class="shoppingCartProductNumber" name="product-1" value="1"/>
@@ -80,7 +80,7 @@
         <!-- shopping cart product ends --> 
         
         <!-- shopping cart product starts -->
-        <div class="shoppingCartProductWrapper"> <a href="register.html" class="shoppingCartProductImageWrapper"><img src="images/content/shoppingCartProductImage-2.jpg" class="shoppingCartProductImage" alt=""/></a>
+        <div class="shoppingCartProductWrapper"> <a href="register.html" class="shoppingCartProductImageWrapper"><img src="{{ url_for('static', filename='img/content/shoppingCartProductImage-2.jpg') }}" class="shoppingCartProductImage" alt=""/></a>
           <div class="shoppingCartProductInfoWrapper"> <a href="register.html" class="shoppingCartProductTitle">Product Two</a>
             <div class="shoppingCartProductButtonsWrapper">
               <input type="text" id="shoppingCartProductNumber-2" class="shoppingCartProductNumber" name="product-2" value="2"/>
@@ -90,7 +90,7 @@
         <!-- shopping cart product ends --> 
         
         <!-- shopping cart product starts -->
-        <div class="shoppingCartProductWrapper"> <a  href="register.html" class="shoppingCartProductImageWrapper"><img src="images/content/shoppingCartProductImage-3.jpg" class="shoppingCartProductImage" alt=""/></a>
+        <div class="shoppingCartProductWrapper"> <a  href="register.html" class="shoppingCartProductImageWrapper"><img src="{{ url_for('static', filename='img/content/shoppingCartProductImage-3.jpg') }}" class="shoppingCartProductImage" alt=""/></a>
           <div class="shoppingCartProductInfoWrapper"> <a href="register.html" class="shoppingCartProductTitle">Product Three</a>
             <div class="shoppingCartProductButtonsWrapper">
               <input type="text" id="shoppingCartProductNumber-3" class="shoppingCartProductNumber" name="product-3" value="1"/>
@@ -116,7 +116,7 @@
       <div class="headerDecoration"></div>
       
       <!-- main logo starts --> 
-      <a href="register.html" class="mainLogo"><img src="images/common/mainLogo.png" alt="" /></a> 
+      <a href="register.html" class="mainLogo"><img src="{{ url_for('static', filename='img/common/mainLogo.png') }}" alt="" /></a> 
       <!-- main logo ends --> 
     </div>
     <!-- header outer wrapper ends --> 
