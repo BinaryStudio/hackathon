@@ -18,6 +18,7 @@ class Parkings(Resource):
 
     def post(self):
         args = get_parking_args()
+        print dict(args)['info']
         parking = basic_info_dao.create_via_dict(dict(args))
         price_dao.create(parking.id, dict(args)['hour'], dict(args)['day'])
         return {'result': 'success'}
@@ -29,6 +30,8 @@ class UidParking(Resource):
     """
     def get(self, uid):
         parking = basic_info_dao.find_via_uid(uid)
+        price = price_dao.find_by_parking_id(parking['id'])
+        parking.update(price)
         return returnSucc(parking)
 
 
@@ -60,7 +63,7 @@ def get_parking_args():
         help='The name of parking place')
     parking_parser.add_argument('total_pak', type=int,
         help='The number of parking slot,should be int')
-    parking_parser.add_argument('info', type=str,
+    parking_parser.add_argument('info', type=str, action='append',
         help='The info of parking place')
     parking_parser.add_argument('uid', type=str,
         help='The info of parking place')

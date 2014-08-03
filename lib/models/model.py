@@ -41,4 +41,4 @@ class BasicInfo(db.Model):
         self.name = json_dic['name']
         self.uid = json_dic['uid']
         self.total_pak = json_dic['total_pak']
-        self.info = json_dic['info']
+        self.info = ';'.join(json_dic['info'])

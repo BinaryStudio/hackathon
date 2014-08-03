@@ -7,9 +7,15 @@ class PriceDao(object):
         price = Price.query.filter_by(id=id).first()
         return price
 
+    def get_price_dict(self, price):
+        price_dict = {}
+        price_dict['hour'] = price.hour
+        price_dict['day'] = price.day
+        return price_dict
+
     def find_by_parking_id(self, parking_id):
         price = Price.query.filter_by(parking_id=parking_id).first()
-        return price
+        return self.get_price_dict(price)
 
     def find_all(self):
         return Price.query.all()
