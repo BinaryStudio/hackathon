@@ -219,7 +219,7 @@ input.fieldWithIcon {
 	height: 18px;
 	width: 18px;
 	margin-right: 24px;
-	background: url(../images/common/accountButtonBg.png) 0 0 no-repeat;
+	background: url(../img/common/accountButtonBg.png) 0 0 no-repeat;
 	margin-top: 18px;
 }
 .shoppingCartButton {
@@ -227,13 +227,13 @@ input.fieldWithIcon {
 	height: 18px;
 	width: 20px;
 	margin-right: 24px;
-	background: url(../images/common/cartButtonBg.png) 0 0 no-repeat;
+	background: url(../img/common/cartButtonBg.png) 0 0 no-repeat;
 	margin-top: 18px;
 }
 .mainMenuButton {
 	height: 18px;
 	width: 24px;
-	background: url(../images/common/mainMenuButtonBg.png) 0px 0px no-repeat;
+	background: url(../img/common/mainMenuButtonBg.png) 0px 0px no-repeat;
 	float: right;
 	margin-top: 18px;
 }
@@ -342,7 +342,7 @@ input.shoppingCartProductNumber {
 	margin-left: 12px;
 }
 .shoppingCartRemoveProductButton {
-	background: #333 url(../images/common/shoppingCartRemoveProductButtonBg.png) center center no-repeat;
+	background: #333 url(../img/common/shoppingCartRemoveProductButtonBg.png) center center no-repeat;
 	color: #fff;
 	display: block;
 	border-radius: 3px;
@@ -409,7 +409,7 @@ input.shoppingCartCheckoutButton {
 .headerDecoration {
 	height: 6px;
 	background-color: #fff;
-	background: url(../images/skins/default/headerFooterDecoBg.png) center 0px repeat-x;
+	background: url(../img/skins/default/headerFooterDecoBg.png) center 0px repeat-x;
 }
 .mainLogo {
 	width: 104px;
@@ -470,7 +470,7 @@ input.shopSearchField:focus {
 .nivoSlider {
 	position: relative;
 	overflow: hidden;
-	background: #fff url(../images/common/loading.gif) no-repeat 50% 50%;
+	background: #fff url(../img/common/loading.gif) no-repeat 50% 50%;
 	background-color: #fff;
 }
 .nivo-main-image {
@@ -544,7 +544,7 @@ a.nivo-prevNav:hover {
 	margin-top: -24px;
 	height: 48px;
 	width: 48px;
-	background: #e4755a url(../images/common/sliderArrowsBg.png) 0 0 no-repeat;
+	background: #e4755a url(../img/common/sliderArrowsBg.png) 0 0 no-repeat;
 	z-index: 9999;
 }
 .previousSlideButton {
@@ -606,7 +606,7 @@ a.nivo-prevNav:hover {
 	top: 50%;
 	left: 6px;
 	margin-top: -32px;
-	background: url(../images/colorbox/controlsBg.png) no-repeat top left;
+	background: url(../img/colorbox/controlsBg.png) no-repeat top left;
 	width: 28px;
 	height: 65px;
 	text-indent: -9999px;
@@ -619,7 +619,7 @@ a.nivo-prevNav:hover {
 	top: 50%;
 	right: 6px;
 	margin-top: -32px;
-	background: url(../images/colorbox/controlsBg.png) no-repeat top right;
+	background: url(../img/colorbox/controlsBg.png) no-repeat top right;
 	width: 28px;
 	height: 65px;
 	text-indent: -9999px;
@@ -632,14 +632,14 @@ a.nivo-prevNav:hover {
 	border-radius: 6px;
 }
 #cboxLoadingGraphic {
-	background: url(../images/colorbox/loading.gif) no-repeat center center;
+	background: url(../img/colorbox/loading.gif) no-repeat center center;
 }
 #cboxClose {
 	position: absolute;
 	top: 6px;
 	right: 6px;
 	display: block;
-	background: url(../images/colorbox/controlsBg.png) no-repeat top center;
+	background: url(../img/colorbox/controlsBg.png) no-repeat top center;
 	width: 24px;
 	height: 24px;
 	text-indent: -9999px;
@@ -1088,7 +1088,7 @@ input.checkoutProductNumber {
 	margin-left: 12px;
 }
 .checkoutRemoveProductButton {
-	background: #333 url(../images/common/checkoutRemoveProductButtonBg.png) center center no-repeat;
+	background: #333 url(../img/common/checkoutRemoveProductButtonBg.png) center center no-repeat;
 	color: #fff;
 	display: block;
 	border-radius: 3px;
@@ -1162,7 +1162,7 @@ input.checkoutCheckoutButton {
 	float: left;
 	padding-left: 0px;
 	padding-right: 15px;
-	background: url(../images/common/portfolioFilterableMenuDecoBg.png) right center no-repeat;
+	background: url(../img/common/portfolioFilterableMenuDecoBg.png) right center no-repeat;
 	margin-right: 9px;
 	margin-bottom: 4px;
 }
@@ -1222,7 +1222,7 @@ input.checkoutCheckoutButton {
 	float: left;
 	padding-left: 40px;
 	color: #666;
-	background: #f0f0f0 url(../images/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
+	background: #f0f0f0 url(../img/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
 	padding-right: 12px;
 }
 .portfolioFilterableDetailsButton {
@@ -1231,7 +1231,7 @@ input.checkoutCheckoutButton {
 	float: right;
 	padding-right: 40px;
 	color: #666;
-	background: #f0f0f0 url(../images/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
+	background: #f0f0f0 url(../img/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
 	padding-left: 12px;
 }
 .portfolioFilterableExpandButton:hover, .portfolioFilterableDetailsButton:hover {
@@ -1345,7 +1345,7 @@ input.checkoutCheckoutButton {
 	float: left;
 	padding-left: 40px;
 	color: #666;
-	background: #e9e9e9 url(../images/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
+	background: #e9e9e9 url(../img/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
 	padding-right: 12px;
 }
 .portfolioOneDetailsButton {
@@ -1354,7 +1354,7 @@ input.checkoutCheckoutButton {
 	float: right;
 	padding-right: 40px;
 	color: #666;
-	background: #e9e9e9 url(../images/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
+	background: #e9e9e9 url(../img/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
 	padding-left: 12px;
 }
 .portfolioOneExpandButton:hover, .portfolioOneDetailsButton:hover {
@@ -1446,7 +1446,7 @@ input.checkoutCheckoutButton {
 	float: left;
 	padding-left: 40px;
 	color: #666;
-	background: #f0f0f0 url(../images/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
+	background: #f0f0f0 url(../img/skins/default/portfolioExpandButtonBg.png) left center no-repeat;
 	padding-right: 12px;
 }
 .singleProjectDetailsButton {
@@ -1455,7 +1455,7 @@ input.checkoutCheckoutButton {
 	float: right;
 	padding-right: 40px;
 	color: #666;
-	background: #f0f0f0 url(../images/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
+	background: #f0f0f0 url(../img/skins/default/portfolioDetailsButtonBg.png) right center no-repeat;
 	padding-left: 12px;
 }
 .singleProjectExpandButton:hover, .singleProjectDetailsButton:hover {
@@ -1533,7 +1533,7 @@ input.checkoutCheckoutButton {
 	float: right;
 	padding-right: 40px;
 	color: #666;
-	background: #f0f0f0 url(../images/skins/default/smallPostReadMoreButtonBg.png) right center no-repeat;
+	background: #f0f0f0 url(../img/skins/default/smallPostReadMoreButtonBg.png) right center no-repeat;
 	padding-left: 12px;
 }
 .smallPostMoreButton:hover {
@@ -1541,7 +1541,7 @@ input.checkoutCheckoutButton {
 }
 .smallPostQuote {
 	padding-left: 28px;
-	background: url(../images/common/quoteBg.png) 0 0 no-repeat;
+	background: url(../img/common/quoteBg.png) 0 0 no-repeat;
 	font-style: italic;
 }
 .smallPostQuoteAuthor {
@@ -1769,7 +1769,7 @@ input.fieldHasError, textarea.fieldHasError {
 	margin-bottom: 0px;
 }
 .formSuccessMessageWrapper > h4 {
-	background: url(../images/common/formSuccessMessageIconBg.png) 0 center no-repeat;
+	background: url(../img/common/formSuccessMessageIconBg.png) 0 center no-repeat;
 	padding-left: 28px;
 }
 .formSuccessMessageWrapper > p:last-child {
@@ -1895,7 +1895,7 @@ input.fieldHasError, textarea.fieldHasError {
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .footerDecoration {
 	height: 6px;
-	background: #fff url(../images/skins/default/headerFooterDecoBg.png) center 0px repeat-x;
+	background: #fff url(../img/skins/default/headerFooterDecoBg.png) center 0px repeat-x;
 	margin-left: 24px;
 	margin-right: 24px;
 }
@@ -1955,7 +1955,7 @@ input.fieldHasError, textarea.fieldHasError {
 	height: 36px;
 	line-height: 36px;
 	border: 1px solid #f0f0f0;
-	background: #f3f3f3 url(../images/common/drop-downTextBg.png) right 0px no-repeat;
+	background: #f3f3f3 url(../img/common/drop-downTextBg.png) right 0px no-repeat;
 	color: #999;
 	display: block;
 	overflow: hidden;
