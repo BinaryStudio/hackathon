@@ -1,10 +1,11 @@
 $(function () {
+	var id = $('#placeid').html();
 	$('#carin').click(function (event) {
 		console.log('clickin');
-		submitData('get', '/rest/slots/inc/', {}, callBackGenerator('success'), callBackGenerator('error'));
+		$.get('/rest/slots/inc/' + id, function () {});
 	});
 	$('#carout').click(function (event) {
 		console.log('clickout');
-		submitData('get', '/rest/slots/des/', {}, callBackGenerator('success'), callBackGenerator('error'));
+		$.get('/rest/slots/des/' + id, function () {});
 	});
 });
