@@ -46,7 +46,10 @@ class Parking(Resource):
     """
     def get(self, parking_id):
         #TODO
-        return {parking_id: parking_id}
+        parking = basic_info_dao.find_by_id(parking_id)
+        price = price_dao.find_by_parking_id(parking_id)
+        parking.update(price)
+        return returnSucc(parking)
 
     def post(self, parking_id):
         #TODO
