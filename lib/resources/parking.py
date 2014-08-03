@@ -34,8 +34,9 @@ class UidParking(Resource):
     """
     def get(self, uid):
         parking = basic_info_dao.find_via_uid(uid)
-        price = price_dao.find_by_parking_id(parking['id'])
-        parking.update(price)
+        if parking:
+            price = price_dao.find_by_parking_id(parking['id'])
+            parking.update(price)
         return returnSucc(parking)
 
 
