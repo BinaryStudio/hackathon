@@ -1,8 +1,8 @@
 //将表单serialize成json
-(function ($) {
-    $.fn.serializeJson = function () {
+(function($) {
+    $.fn.serializeJson = function() {
         var serializeObj = {};
-        $(this.serializeArray()).each(function () {
+        $(this.serializeArray()).each(function() {
             serializeObj[this.name] = this.value;
         });
         return serializeObj;
@@ -19,13 +19,13 @@ function submitData(method, url, submitData, successCallBack, errorCallBack) {
     });
 }
 
-function callBackGenerator(callBackType, targetModal, message, notifyCallBack) {
+function callBackGenerator(callBackType, notifyCallBack) {
     if (callBackType === 'error') {
-        return function (XmlHttpRequest, textStatus, errorThrown) {
+        return function(XmlHttpRequest, textStatus, errorThrown) {
             console.log(XmlHttpRequest);
         };
     } else if (callBackType === 'success') {
-        return function (msg) {
+        return function(msg) {
             if (notifyCallBack != undefined) {
                 notifyCallBack(msg);
             }

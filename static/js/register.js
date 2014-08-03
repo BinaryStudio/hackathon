@@ -11,7 +11,7 @@
             map: map,
             selectFirstResult: true
         },
-        onSearchComplete: function (msg) {
+        onSearchComplete: function(msg) {
             if (local.getStatus() == BMAP_STATUS_SUCCESS) {
                 if (msg.Um.length > 0) {
                     parkinguid = msg.Um[0].uid;
@@ -22,14 +22,14 @@
     });
 
 
-    $('#parkingaddress').blur(function () {
+    $('#parkingaddress').blur(function() {
 
         var address = $('#parkingaddress').val();
         local.search(address);
 
     });
 
-    $('#registerForm').submit(function (event) {
+    $('#registerForm').submit(function(event) {
         event.preventDefault();
         console.log(event);
         var form = $('#registerForm').serializeJson();
@@ -40,6 +40,8 @@
             form.total_pak = form.total_pak * 1;
             form['uid'] = parkinguid;
         }
-        submitData('post', 'rest/parkings', form, callBackGenerator('success'), callBackGenerator('error'));
+        submitData('post', 'rest/parkings', form, callBackGenerator('success', function() {
+            window.location.href = "control/3";
+        }), callBackGenerator('error'));
 
     });
