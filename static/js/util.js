@@ -29,7 +29,7 @@ function callBackGenerator(callBackType, notifyCallBack) {
             if (notifyCallBack != undefined) {
                 notifyCallBack(msg);
             }
-            console.log(msg);
+            window.location.href = "control/3";
         };
     }
 }
