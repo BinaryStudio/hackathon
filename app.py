@@ -18,17 +18,17 @@ def create_app():
         db.create_all()
 
     api = Api(app)
-    
-    api.add_resource(Parking, '/parkings/<string:parking_id>')
-    api.add_resource(Parkings, '/parkings')
-    api.add_resource(UidParking, '/parkings/uid/<string:uid>')
 
-    api.add_resource(SlotInc, '/slots/inc/<string:parking_id>')
-    api.add_resource(SlotDes, '/slots/des/<string:parking_id>')
-    api.add_resource(UpdateSlot, '/slots/update/<string:parking_id>')
-    api.add_resource(Slot, '/slots')
+    api.add_resource(Parking, '/rest/parkings/<string:parking_id>')
+    api.add_resource(Parkings, '/rest/parkings')
+    api.add_resource(UidParking, '/rest/parkings/uid/<string:uid>')
 
-    api.add_resource(AllStats, '/stats/<string:parking_id>')
+    api.add_resource(SlotInc, '/rest/slots/inc/<string:parking_id>')
+    api.add_resource(SlotDes, '/rest/slots/des/<string:parking_id>')
+    api.add_resource(UpdateSlot, '/rest/slots/update/<string:parking_id>')
+    api.add_resource(Slot, '/rest/slots')
+
+    api.add_resource(AllStats, '/rest/stats/<string:parking_id>')
 
     return app
 
