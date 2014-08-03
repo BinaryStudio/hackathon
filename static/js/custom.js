@@ -454,7 +454,8 @@ jQuery(document).ready(function ($) {
 
 	var local = new BMap.LocalSearch(map, {
 		renderOptions: {
-			map: map
+			map: map,
+			selectFirstResult: true
 		},
 		onSearchComplete: function (msg) {
 			console.log(msg);
