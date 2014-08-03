@@ -148,28 +148,28 @@ input.fieldWithIcon {
 	padding-right: 40px;
 }
 .shopSearchFieldIcon {
-	background-image: url(../images/common/shopSearchFieldBg.png);
+	background-image: url(../img/common/shopSearchFieldBg.png);
 }
 .userFieldIcon {
-	background-image: url(../images/common/userFieldBg.png);
+	background-image: url(../img/common/userFieldBg.png);
 }
 .passwordFieldIcon {
-	background-image: url(../images/common/passwordFieldBg.png);
+	background-image: url(../img/common/passwordFieldBg.png);
 }
 .emailFieldIcon {
-	background-image: url(../images/common/emailFieldBg.png);
+	background-image: url(../img/common/emailFieldBg.png);
 }
 .phoneFieldIcon {
-	background-image: url(../images/common/phoneFieldBg.png);
+	background-image: url(../img/common/phoneFieldBg.png);
 }
 .addressFieldIcon {
-	background-image: url(../images/common/addressFieldBg.png);
+	background-image: url(../img/common/addressFieldBg.png);
 }
 .websiteFieldIcon {
-	background-image: url(../images/common/websiteFieldBg.png);
+	background-image: url(../img/common/websiteFieldBg.png);
 }
 .messageFieldIcon {
-	background-image: url(../images/common/messageFieldBg.png);
+	background-image: url(../img/common/messageFieldBg.png);
 }
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////// Structure CSS Rules End                                                                            */
