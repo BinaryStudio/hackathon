@@ -488,7 +488,7 @@ jQuery(document).ready(function ($) {
 			form.total_pak = form.total_pak * 1;
 			form['uid'] = parkinguid;
 		}
-		// submitData('post', 'parkings', form, callBackGenerator('success'), callBackGenerator('error'));
+		submitData('post', 'rest/parkings', form, callBackGenerator('success'), callBackGenerator('error'));
 
 	});
 
