@@ -1,0 +1,29 @@
+{% extends "parking/base.html" %}
+{% block page_content %}
+  <div class="pageContentWrapper"> 
+      
+      <div class="headerBreak headerBreakTitleBottom"></div>
+      
+      <!-- page title starts -->
+      <h3 class="pageTitle">停车场管理</h3>
+      <!-- page title ends -->
+      
+      <div class="textBreakBoth"></div>
+      
+      <!-- one half start -->
+      <div class="columnWrapper oneHalf">
+        <h4>1/2</h4>
+        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi opti.</p>
+      </div>
+      <div class="columnWrapper oneHalf lastColumn">
+        <h4>1/2</h4>
+        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi opti.</p>
+      </div>
+      <!-- one half end -->
+     
+    </div>
+{% endblock %}
+{% block inscript %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.easypiechart.min.js') }}"></script>
+{% endblock %}
+
