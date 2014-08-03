@@ -24,7 +24,8 @@ class Parkings(Resource):
         parking = basic_info_dao.create_via_dict(dict(args))
         price_dao.create(parking.id, dict(args)['hour'], dict(args)['day'])
         ava_dao.create(parking.id, parking.total_pak)
-        return {'result': 'success'}
+        data = {'id': parking.id}
+        return returnSucc(data)
 
 
 class UidParking(Resource):
