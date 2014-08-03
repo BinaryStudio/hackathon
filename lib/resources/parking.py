@@ -59,7 +59,7 @@ class Parking(Resource):
 
 def get_parking_args():
     parking_parser = reqparse.RequestParser()
-    parking_parser.add_argument('name', type=str,
+    parking_parser.add_argument('name',
         help='The name of parking place')
     parking_parser.add_argument('total_pak', type=int,
         help='The number of parking slot,should be int')
