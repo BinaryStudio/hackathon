@@ -10,8 +10,8 @@ $(function() {
     });
     $.get('/rest/parkings/' + id, function(msg) {
         console.log(msg);
-        $('#parkname').html(msg.name);
-        $('#total_pak').html(msg.total_pak);
+        $('#parkname').html(msg.data.name);
+        $('#total_pak').html(msg.data.total_pak);
 
     })
 });
