@@ -2,7 +2,7 @@ from flask.ext.restful import Resource
 from flask.ext.restful import reqparse
 from lib.dao.basic_dao import BasicInfoDao
 from lib.dao.price_dao import PriceDao
-from lib.dao.ava_dao import ava_dao
+from lib.dao.ava_dao import AvaDao
 from lib.utils.resultutil import *
 
 basic_info_dao = BasicInfoDao()
