@@ -483,6 +483,9 @@ jQuery(document).ready(function ($) {
 		var form = $('#registerForm').serializeJson();
 		console.log(form);
 		if (parkinguid != undefined) {
+			form.day = form.day * 1;
+			form.hour = form.hour * 1;
+			form.total_pak = form.total_pak * 1;
 			form['uid'] = parkinguid;
 		}
 		// submitData('post', 'parkings', form, callBackGenerator('success'), callBackGenerator('error'));
