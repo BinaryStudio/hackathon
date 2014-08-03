@@ -6,6 +6,7 @@ from lib.utils.resultutil import *
 
 basic_info_dao = BasicInfoDao()
 price_dao = PriceDao()
+ava_dao = AvaDao()
 
 
 class Parkings(Resource):
@@ -21,6 +22,7 @@ class Parkings(Resource):
         print dict(args)['info']
         parking = basic_info_dao.create_via_dict(dict(args))
         price_dao.create(parking.id, dict(args)['hour'], dict(args)['day'])
+        ava_dao.create(parking.id, parking.total_pak)
         return {'result': 'success'}
 
 
