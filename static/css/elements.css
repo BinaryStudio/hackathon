@@ -134,10 +134,11 @@ blockquote {
 	margin-bottom: 0px;
 }
 .buttonWrapper {
-	height: 16px;
-	padding: 4px;
-	padding-right: 9px;
-	padding-left: 9px;
+	height: 80px;
+	width: 100%;
+	font-size: 50px;
+	line-height: 80px;
+	text-align: center;
 	color: #fff;
 	display: inline-block;
 	background-position: 9px center;
@@ -185,7 +186,6 @@ blockquote {
 }
 .buttonArrowRight {
 	background-image: url(../images/icons/smallIcons/16/2/iconArrowRightBg16.png);
-	padding-left: 34px;
 }
 .buttonBolt {
 	background-image: url(../images/icons/smallIcons/16/2/iconBoltBg16.png);
@@ -241,7 +241,7 @@ blockquote {
 }
 .buttonLocation {
 	background-image: url(../images/icons/smallIcons/16/2/iconLocationBg16.png);
-	padding-left: 34px;
+
 }
 .buttonMinus {
 	background-image: url(../images/icons/smallIcons/16/2/iconMinusBg16.png);
