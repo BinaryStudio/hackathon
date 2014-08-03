@@ -485,7 +485,7 @@ jQuery(document).ready(function ($) {
 		if (parkinguid != undefined) {
 			form['uid'] = parkinguid;
 		}
-		submitData('post', 'parkings', form, callBackGenerator('success'), callBackGenerator('error'));
+		// submitData('post', 'parkings', form, callBackGenerator('success'), callBackGenerator('error'));
 
 	});
 
