@@ -124,24 +124,33 @@
           <fieldset>
             <div class="formFieldWrapper">
               <label for="registerFirstNameField">名字:</label>
-              <input type="text" value="" name="name" id="registerFirstNameField" class="registerFirstNameField fieldWithIcon userFieldIcon"	name="registerFirstNameField" />
-            </div>
-            <div class="formFieldWrapper">
-              <label for="registerLastNameField">车位数目:</label>
-              <input type="text" value="" name="total_pak" id="registerLastNameField" class="registerLastNameField fieldWithIcon userFieldIcon" name="registerLastNameField" />
-            </div>
-            <div class="formFieldWrapper">
-              <label for="registerUserNameField">电话:</label>
-              <input type="text" value="" id="registerUserNameField" class="registerPhoneField fieldWithIcon phoneFieldIcon" name="registerUserNameField" />
-            </div>
-            <div class="formFieldWrapper">
-              <label for="registerEmailField">Email:</label>
-              <input type="text" value="" id="registerEmailField" class="registerEmailField fieldWithIcon emailFieldIcon" name="registerEmailField" />
+              <input type="text" value="" name="name" id="registerFirstNameField" class="registerFirstNameField fieldWithIcon userFieldIcon" />
             </div>
             <div class="formFieldWrapper">
               <label for="registerPasswordField">地址:</label>
-              <input type="password" value="" id="registerPasswordField" class="registerAddressField fieldWithIcon addressFieldIcon" name="registerPasswordField" />
+              <input type="password" value="" id="parkingaddress" class="registerAddressField fieldWithIcon addressFieldIcon" name="address" />
             </div>
+            <div class="formFieldWrapper">
+              <label for="registerLastNameField">车位数目:</label>
+              <input type="text" value="" name="total_pak" id="registerLastNameField" class="registerLastNameField fieldWithIcon userFieldIcon" />
+            </div>
+            <div class="formFieldWrapper">
+              <label for="registerLastNameField">每小时价格:</label>
+              <input type="text" value="" name="hour" id="registerLastNameField" class="registerLastNameField fieldWithIcon userFieldIcon"/>
+            </div>
+            <div class="formFieldWrapper">
+              <label for="registerLastNameField">每天价格:</label>
+              <input type="text" value="" name="day" id="registerLastNameField" class="registerLastNameField fieldWithIcon userFieldIcon"/>
+            </div>
+            <div class="formFieldWrapper">
+              <label for="registerUserNameField">电话:</label>
+              <input type="text" value="" id="registerUserNameField" name="info" class="registerPhoneField fieldWithIcon phoneFieldIcon"/>
+            </div>
+            <div class="formFieldWrapper">
+              <label for="registerEmailField">Email:</label>
+              <input type="text" value="" id="registerEmailField" name="info" class="registerEmailField fieldWithIcon emailFieldIcon" />
+            </div>
+       
             <div id="l-map"></div> 
             <div class="registerButtonsWrapper"> <a href="login.html" class="registerLoginButton">登录</a>
               <input type="submit" value="注册" class="registerButton" id="registerButton"/>

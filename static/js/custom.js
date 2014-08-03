@@ -452,41 +452,19 @@ jQuery(document).ready(function ($) {
 	var point = new BMap.Point(116.331398, 39.897445);
 	map.centerAndZoom(point, 12);
 
-	var startPoint, endPoint;
+	$('#parkingaddress').blur(function () {
 
-	var geolocation = new BMap.Geolocation();
-	var driving = new BMap.DrivingRoute(map, {
-		renderOptions: {
-			map: map,
-			autoViewport: true
-		}
+		var address = $('#parkingaddress').text;
+		var myGeo = new BMap.Geocoder();
+		// 将地址解析结果显示在地图上,并调整地图视野
+		myGeo.getPoint(address, function (point) {
+			if (point) {
+				map.centerAndZoom(point, 16);
+				map.addOverlay(new BMap.Marker(point));
+			}
+		}, "北京市");
+		console.log('address is ' + address);
 	});
-	var local = new BMap.LocalSearch(map, {
-		renderOptions: {
-			map: map,
-			autoViewport: true
-		},
-		onSearchComplete: function (result) {
-			//TODO 加入UID处理
-			var parking = result.Um[0];
-			driving.search(startPoint, parking.point);
-		}
-	});
-
-
-	geolocation.getCurrentPosition(function (r) {
-		if (this.getStatus() == BMAP_STATUS_SUCCESS) {
-			var mk = new BMap.Marker(r.point);
-			map.addOverlay(mk);
-			map.panTo(r.point);
-			local.searchNearby("停车场", r.point);
-			startPoint = r.point;
-		} else {
-			alert('failed' + this.getStatus());
-		}
-	}, {
-		enableHighAccuracy: true
-	})
 
 
 
