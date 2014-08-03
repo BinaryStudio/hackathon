@@ -18,3 +18,7 @@ def list():
 @main.route('/register')
 def register():
     return render_template('parking/register.html')
+
+@main.route('/control/<placeid>')
+def control(placeid):
+    return render_template('parking/control.html', placeid=placeid)
