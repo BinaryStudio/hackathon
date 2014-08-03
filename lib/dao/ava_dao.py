@@ -1,4 +1,5 @@
 from firebase import firebase
+from random import random
 
 class AvaDao(object):
     def __init__(self):
@@ -26,5 +27,7 @@ class AvaDao(object):
         cur = int(self.get(id))
         cur -= num
         self.update(id, cur)
+
+
 if __name__ == '__main__':
-    AvaDao().create(1, 200)
+    ava = AvaDao()
