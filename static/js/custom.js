@@ -477,7 +477,7 @@ jQuery(document).ready(function ($) {
 
 	});
 
-	$('#registerButton').submit(function (event) {
+	$('#registerForm').submit(function (event) {
 		event.preventDefault();
 		console.log(event);
 		var form = $('#registerForm').serializeJson();
