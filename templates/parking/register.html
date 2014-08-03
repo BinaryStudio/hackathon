@@ -31,6 +31,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.nivo-slider.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.colorbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=18c62745627d83580552053f9d761591"></script>  
 <!-- JavaScript files end -->
 </head>
 <body> 
@@ -141,6 +142,7 @@
               <label for="registerPasswordField">地址:</label>
               <input type="password" value="" id="registerPasswordField" class="registerAddressField fieldWithIcon addressFieldIcon" name="registerPasswordField" />
             </div>
+            <div id="l-map"></div>  
             <div class="registerButtonsWrapper"> <a href="login.html" class="registerLoginButton">登录</a>
               <input type="submit" value="注册" class="registerButton" id="registerButton"/>
             </div>
