@@ -451,14 +451,21 @@ jQuery(document).ready(function ($) {
 	var map = new BMap.Map("l-map");
 	var point = new BMap.Point(116.331398, 39.897445);
 	map.centerAndZoom(point, 12);
+	var parkinguid;
 
 	var local = new BMap.LocalSearch(map, {
+		pageCapacity: 2,
 		renderOptions: {
 			map: map,
 			selectFirstResult: true
 		},
 		onSearchComplete: function (msg) {
-			console.log(msg);
+			if (local.getStatus() == BMAP_STATUS_SUCCESS) {
+				if (msg.Um.length > 0) {
+					parkinguid = msg.Um[0].uid;
+				}
+				console.log(parkinguid);
+			}
 		}
 	});
 
@@ -466,11 +473,8 @@ jQuery(document).ready(function ($) {
 	$('#parkingaddress').blur(function () {
 
 		var address = $('#parkingaddress').val();
-		var myGeo = new BMap.Geocoder();
-		// 将地址解析结果显示在地图上,并调整地图视野
-
 		local.search(address);
-		console.log('address is ' + address);
+
 	});
 
 
