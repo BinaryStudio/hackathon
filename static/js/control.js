@@ -8,4 +8,7 @@ $(function () {
 		console.log('clickout');
 		$.get('/rest/slots/des/' + id, function () {});
 	});
+	$.get('/rest/parkings/' + id, function (msg) {
+		console.log(msg);
+	})
 });
