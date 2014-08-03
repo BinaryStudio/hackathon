@@ -1,10 +1,10 @@
 $(function() {
     var id = $('#placeid').html();
-    $('#carin').on('touch', function(event) {
+    $('#carin').on('click', function(event) {
         console.log('clickin');
         $.get('/rest/slots/inc/' + id, function() {});
     });
-    $('#carout').on('touch', function(event) {
+    $('#carout').on('click', function(event) {
         console.log('clickout');
         $.get('/rest/slots/des/' + id, function() {});
     });
