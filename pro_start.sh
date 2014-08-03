@@ -2,7 +2,7 @@ rm -rf *.out
 nohup python api.py pro >> api.out &
 nohup python app.py pro >> app.out &
 sleep 1
-echo '-----'
+echo '---API---'
 cat api.out
-echo '-----'
+echo '---APP---'
 cat app.out

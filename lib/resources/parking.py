@@ -1,6 +1,9 @@
 from flask.ext.restful import Resource
 from flask.ext.restful import reqparse
 from lib.dao.basic_dao import BasicInfoDao
+from lib.utils.resultutil import *
+
+basic_info_dao = BasicInfoDao()
 
 
 class Parkings(Resource):
@@ -15,8 +18,17 @@ class Parkings(Resource):
         #TODO
         args = get_parking_args()
         print dict(args)
-        result = BasicInfoDao().create_via_dict(dict(args))
+        result = basic_info_dao.create_via_dict(dict(args))
         return {'result': 'success', 'data': str(result)}
+
+
+class UidParking(Resource):
+    """
+    API Resource for get the parking info via uid
+    """
+    def get(self, uid):
+        parking = basic_info_dao.find_via_uid(uid)
+        return returnSucc(parking)
 
 
 class Parking(Resource):

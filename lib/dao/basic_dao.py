@@ -7,6 +7,10 @@ class BasicInfoDao(object):
         basic_info = BasicInfo.query.filter_by(id=id).first()
         return basic_info
 
+    def find_via_uid(self, uid):
+        basic_info = BasicInfo.query.filter_by(uid=uid).first()
+        return self.get_parking_dict(basic_info)
+
     def update(self, basic_info):
         _basic_info = self.find_by_id(basic_info.id)
         _basic_info.name = basic_info.name
@@ -31,3 +35,14 @@ class BasicInfoDao(object):
         basic_info = BasicInfo(json_dict)
         self.create(basic_info)
         return basic_info
+
+    def get_parking_dict(self, parking):
+        parking_dict = {}
+        
+        parking_dict['id'] = parking.id
+        parking_dict['name'] = parking.name
+        parking_dict['uid'] = parking.uid
+        parking_dict['total_pak'] = parking.total_pak
+        parking_dict['info'] = parking.info
+
+        return parking_dict
