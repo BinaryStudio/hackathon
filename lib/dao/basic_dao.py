@@ -9,7 +9,10 @@ class BasicInfoDao(object):
 
     def find_via_uid(self, uid):
         basic_info = BasicInfo.query.filter_by(uid=uid).first()
-        return self.get_parking_dict(basic_info)
+        if basic_info:
+            return self.get_parking_dict(basic_info)
+        else:
+            return {}
 
     def update(self, basic_info):
         _basic_info = self.find_by_id(basic_info.id)
