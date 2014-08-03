@@ -20,10 +20,12 @@ class Stat(db.Model):
 
 class Price(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    parking_id = db.Column(db.Integer)
     hour = db.Column(db.Float)
     day = db.Column(db.Float)
 
-    def __init__(self, hour, day):
+    def __init__(self, parking_id, hour, day):
+        self.parking_id = parking_id
         self.hour = hour
         self.day = day
 

@@ -1,9 +1,11 @@
 from flask.ext.restful import Resource
 from flask.ext.restful import reqparse
 from lib.dao.basic_dao import BasicInfoDao
+from lib.dao.price_dao import PriceDao
 from lib.utils.resultutil import *
 
 basic_info_dao = BasicInfoDao()
+price_dao = PriceDao()
 
 
 class Parkings(Resource):
@@ -15,11 +17,10 @@ class Parkings(Resource):
         return {parking_id: parking_id}
 
     def post(self):
-        #TODO
         args = get_parking_args()
-        print dict(args)
-        result = basic_info_dao.create_via_dict(dict(args))
-        return {'result': 'success', 'data': str(result)}
+        parking = basic_info_dao.create_via_dict(dict(args))
+        price_dao.create(parking.id, dict(args)['hour'], dict(args)['day'])
+        return {'result': 'success'}
 
 
 class UidParking(Resource):
