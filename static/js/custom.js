@@ -452,17 +452,23 @@ jQuery(document).ready(function ($) {
 	var point = new BMap.Point(116.331398, 39.897445);
 	map.centerAndZoom(point, 12);
 
+	var local = new BMap.LocalSearch(map, {
+		renderOptions: {
+			map: map
+		},
+		onSearchComplete: function (msg) {
+			console.log(msg);
+		}
+	});
+
+
 	$('#parkingaddress').blur(function () {
 
 		var address = $('#parkingaddress').val();
 		var myGeo = new BMap.Geocoder();
 		// 将地址解析结果显示在地图上,并调整地图视野
-		myGeo.getPoint(address, function (point) {
-			if (point) {
-				map.centerAndZoom(point, 16);
-				map.addOverlay(new BMap.Marker(point));
-			}
-		}, "北京市");
+
+		local.search(address);
 		console.log('address is ' + address);
 	});
 
