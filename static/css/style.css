@@ -412,16 +412,16 @@ input.shoppingCartCheckoutButton {
 	background: url(../img/skins/default/headerFooterDecoBg.png) center 0px repeat-x;
 }
 .mainLogo {
-	width: 104px;
-	height: 30px;
+	width: 80px;
+	height: 80px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 36px;
-	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .mainLogo > img {
-	width: 104px;
-	height: 30px;
+	width: 80px;
+	height: 80px;
 }
 .shopSearchFormWrapper {
 	margin-bottom: 36px;
