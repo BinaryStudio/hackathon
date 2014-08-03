@@ -130,7 +130,7 @@ geolocation.getCurrentPosition(function(r) {
     if (this.getStatus() == BMAP_STATUS_SUCCESS) {
         point = r.point;
     } else {
-        point = new BMap.Point(116.313764, 39.987192);
+        point = new BMap.Point(116.313545,39.989201); 
     }
     window.p = point;
     var mk = new BMap.Marker(point);
