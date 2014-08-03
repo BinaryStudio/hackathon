@@ -5,7 +5,10 @@ class BasicInfoDao(object):
     
     def find_by_id(self, id):
         basic_info = BasicInfo.query.filter_by(id=id).first()
-        return basic_info
+        if basic_info:
+            return self.get_parking_dict(basic_info)
+        else:
+            return {}
 
     def find_via_uid(self, uid):
         basic_info = BasicInfo.query.filter_by(uid=uid).first()
